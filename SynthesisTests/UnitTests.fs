@@ -83,16 +83,16 @@ let ``ofTime`` () =
 
 [<Test>]
 let ``toTime`` () =
-    //toTime 0 |> should equal (0,0,0)
+    toTime 0 |> should equal (0,0,0)
     toTime 18000 |> should equal (5,0,0)
-    //toTime 300 |> should equal (0,5,0)
-    //toTime 5 |> should equal (0,0,5)
-    //toTime 18005 |> should equal (5,0,5)
-    //toTime 18300 |> should equal (5,5,0)
-    //toTime 18305 |> should equal (5,5,5)
-    //toTime 305 |> should equal (0,5,5)
-    //toTime 10921 |> should equal (3,2,1)
-    //toTime -15 |> should equal (0,0,0)
+    toTime 300 |> should equal (0,5,0)
+    toTime 5 |> should equal (0,0,5)
+    toTime 18005 |> should equal (5,0,5)
+    toTime 18300 |> should equal (5,5,0)
+    toTime 18305 |> should equal (5,5,5)
+    toTime 305 |> should equal (0,5,5)
+    toTime 10921 |> should equal (3,2,1)
+    toTime -15 |> should equal (0,0,0)
 
 [<Test>]
 let ``digits`` () =

@@ -104,34 +104,34 @@ let bizFuzz n =
 let monthDay d y =
     let monthly d a =
         match ((1<=d)&& (d<=31)) with |true-> "January" | false -> match ((32 >= d) && (d <=(59 + a))) with
-                                                                    |true -> "February"
-                                                                    |false -> match (((60+a) >=d) && (d <=(90+a))) with 
-                                                                                 |true -> "March"
-                                                                                 |false -> match (((91+a) >=d) && (d <=(120+a))) with 
-                                                                                              |true -> "April"
-                                                                                              |false -> match (((121+a) >=d) && (d <=(151+a))) with
-                                                                                                        |true -> "May"
-                                                                                                        |false -> match (((152+a) >=d) && (d <=(181+a))) with
-                                                                                                                    |true -> "June"
-                                                                                                                    |false -> match (((182+a) >=d) && (d <=(212+a))) with
-                                                                                                                                |true -> "July"
-                                                                                                                                |false -> match (((213+a) >=d) && (d <=(243+a))) with
-                                                                                                                                            |true -> "August"
-                                                                                                                                            |false -> match (((244+a) >=d) && (d <=(273+a))) with
-                                                                                                                                                        |true -> "September"
-                                                                                                                                                        |false -> match (((274+a) >=d) && (d <=(304+a))) with
-                                                                                                                                                                    |true -> "October"
-                                                                                                                                                                    |false -> match (((305+a) >=d) && (d <=(334+a))) with
-                                                                                                                                                                                |true -> "November"
-                                                                                                                                                                                |false -> match (((335+a) >=d) && (d <=(365+a))) with
-                                                                                                                                                                                            |true -> "December"
-                                                                                                                                                                                            |false -> failwith "out of range"
+                                                                      |true -> "February"
+                                                                      |false -> match (((60 + a) >=d) && (d <=(90 + a))) with
+                                                                                  |true -> "March"
+                                                                                  |false -> match (((91 + a) >=d) && (d <=(120 + a))) with
+                                                                                             |true -> "April"
+                                                                                             |false -> match (((121 + a) >=d) && (d <=(151 + a))) with
+                                                                                                         |true -> "May"
+                                                                                                         |false -> match (((152 + a) >=d) && (d <=(181 + a))) with
+                                                                                                                     |true -> "June"
+                                                                                                                     |false -> match (((182 + a) >=d) && (d <=(212 + a))) with
+                                                                                                                                 |true -> "July"
+                                                                                                                                 |false -> match (((213 + a) >=d) && (d <=(243 + a))) with
+                                                                                                                                             |true -> "August"
+                                                                                                                                             |false -> match (((244 + a) >=d) && (d <=(273 + a))) with
+                                                                                                                                                         |true -> "September"
+                                                                                                                                                         |false -> match (((274 + a) >=d) && (d <=(304 + a))) with
+                                                                                                                                                                     |true -> "October"
+                                                                                                                                                                     |false -> match (((305 + a) >=d) && (d <=(334 + a))) with
+                                                                                                                                                                                 |true -> "November"
+                                                                                                                                                                                 |false -> match (((335 + a) >=d) && (d <=(365 + a))) with
+                                                                                                                                                                                             |true -> "December"
+                                                                                                                                                                                             |false -> failwith "out of range"
                                                                     
     match d =0 with
     |true -> failwith "cant have day 0"
-    |false -> match isLeap(y) with 
-             |true -> (match d >=1 && d <=366 with |false -> failwith "day out of range"|true -> monthly d 1)
-             |false -> (match d >=1 && d <=365 with |false -> failwith "day out of range"|true-> monthly d 0)
+    |false -> match isLeap(y) with
+              |true -> (match d >=1 && d <=366 with |false -> failwith "day out of range"|true -> monthly d 1)
+              |false -> (match d >=1 && d <=365 with |false -> failwith "day out of range"|true-> monthly d 0)
     //failwith "Not implemented"
 
 let coord _ =
